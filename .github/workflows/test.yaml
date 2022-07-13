@@ -22,9 +22,9 @@ jobs:
       - name: Log into AWS (DO NOT USE THIS, THIS IS FOR DEMO ONLY)
         run: |
           run: |
-          echo "${{ secrets.AWS_ACCESS_KEY_ID }}" >> $GITHUB_ENV
-          echo "${{ secrets.AWS_SECRET_ACCESS_KEY}}" >> $GITHUB_ENV
-          echo "${{ secrets.AWS_SESSION_TOKEN}}" >> $GITHUB_ENV
+          echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}" >> $GITHUB_ENV
+          echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY}}" >> $GITHUB_ENV
+          echo "AWS_SESSION_TOKEN=${{ secrets.AWS_SESSION_TOKEN}}" >> $GITHUB_ENV
           echo Sign in using AWS_ACCESS_KEY_ID - ${{ secrets.AWS_ACCESS_KEY_ID }}
           echo Sign in using AWS_SECRET_ACCESS_KEY - ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           echo Sign in using AWS_SESSION_TOKEN - ${{ secrets.AWS_SESSION_TOKEN }}
@@ -32,8 +32,8 @@ jobs:
       - name: Log into FACEBOOK (DO NOT USE THIS, THIS IS FOR DEMO ONLY)
         run: |
           run: |
-          echo "${{ secrets.FACEBOOK_USER_NAME }}" >> $GITHUB_ENV
-          echo "${{ secrets.FACEBOOK_PASSWORD}}" >> $GITHUB_ENV
+          echo "FACEBOOK_USER_NAME=${{ secrets.FACEBOOK_USER_NAME }}" >> $GITHUB_ENV
+          echo "FACEBOOK_PASSWORD=${{ secrets.FACEBOOK_PASSWORD}}" >> $GITHUB_ENV
           echo Sign in using FACEBOOK_USER_NAME - ${{ secrets.FACEBOOK_USER_NAME }}
           echo Sign in using FACEBOOK_PASSWORD - ${{ secrets.FACEBOOK_PASSWORD }}
 
