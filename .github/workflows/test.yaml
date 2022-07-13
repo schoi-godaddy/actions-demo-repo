@@ -40,3 +40,9 @@ jobs:
       - name: Run unit tests
         run: |
           python -m unittest -v
+
+      - uses: schoi-godaddy/ping-reviewer-aksion@v1.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          who-to-ping: "schoi-godaddy"
